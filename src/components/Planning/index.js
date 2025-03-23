@@ -34,7 +34,7 @@ const Planning = ({ classSection, title }) => {
   };
 
   return (
-    <div className={cn("section", classSection, styles.section)}>
+    <div className={cn(styles.center, classSection, styles.section)}>
       <div className={cn("container", styles.container)}>
         <div className={styles.wrap}>
           <div className={cn("stage", styles.stage)}>

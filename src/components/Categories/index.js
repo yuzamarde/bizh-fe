@@ -1,12 +1,23 @@
 import React from "react";
 import cn from "classnames";
 import styles from "./Categories.module.sass";
-import Slider from "react-slick";
+import dynamic from "next/dynamic";
 import Item from "./Item";
 import Icon from "../Icon";
 
-const SlickArrow = ({ currentSlide, slideCount, children, ...props }) => (
-  <button {...props}>{children}</button>
+// Load Slider only on client side
+const Slider = dynamic(() => import("react-slick"), { ssr: false });
+
+// Custom arrow with proper props
+const SlickArrow = ({ className, style, onClick, icon }) => (
+  <button
+    type="button"
+    className={className}
+    style={{ ...style, display: "block", zIndex: 10 }}
+    onClick={onClick}
+  >
+    <Icon name={icon} size="14" />
+  </button>
 );
 
 const Categories = ({ classSection, title, info, items }) => {
@@ -15,16 +26,8 @@ const Categories = ({ classSection, title, info, items }) => {
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
-    nextArrow: (
-      <SlickArrow>
-        <Icon name="arrow-next" size="14" />
-      </SlickArrow>
-    ),
-    prevArrow: (
-      <SlickArrow>
-        <Icon name="arrow-prev" size="14" />
-      </SlickArrow>
-    ),
+    nextArrow: <SlickArrow icon="arrow-next" />,
+    prevArrow: <SlickArrow icon="arrow-prev" />,
     responsive: [
       {
         breakpoint: 1179,

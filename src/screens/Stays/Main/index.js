@@ -10,7 +10,7 @@ import Travelers from "../../../components/Travelers";
 const Main = () => {
   return (
     <div className={cn("section", styles.section)}>
-      <div className={cn("container", styles.container)}>
+      <div className={cn(styles.center, styles.main__center)}>
         <div className={styles.preview}>
           <picture>
             <source
@@ -20,8 +20,8 @@ const Main = () => {
             <img src="/images/content/main-pic-1.jpg" alt="Main" />
           </picture>
           <div className={styles.wrap}>
-            <h1 className={cn("hero", styles.title)}>Air, sleep, dream</h1>
-            <div className={cn("info", styles.info)}>
+            <h1 className={cn(styles.main__title, styles.title, styles.hero)}>Air, sleep, dream</h1>
+            <div className={cn(styles.main__info, styles.info)}>
               Find and book a great experience.
             </div>
             <Link className={cn("button", styles.button)} href="/stays-category">
@@ -43,9 +43,10 @@ const Main = () => {
               placeholder="Location"
             />
             <DateRange
-              className={styles.date}
+              className={styles.location}
               icon="calendar"
-              description="Add date"
+              title="Travelers"
+              // description="Add date"
               startDatePlaceholderText="Check in"
               endDatePlaceholderText="Check out"
               displayFormat="MMM DD, YYYY"

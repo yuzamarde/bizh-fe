@@ -79,7 +79,7 @@ const Header = ({ separatorHeader, wide, notAuthorized }) => {
 
             <Link
               href="/list-your-property"
-              className={cn("button-stroke button-small", styles.button)}
+              className={cn("button-stroke button-small", styles.button__small, styles.button__stroke)}
             >
               List your property
             </Link>

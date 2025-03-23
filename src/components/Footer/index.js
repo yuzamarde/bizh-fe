@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState } from "react";
 import cn from "classnames";
 import styles from "./Footer.module.sass";
@@ -86,7 +88,7 @@ const Footer = () => {
         </div>
         <div className={styles.bottom}>
           <div className={styles.copyright}>
-            Copyright © 2021 UI8 LLC. All rights reserved
+            All rights reserved
           </div>
         </div>
       </div>

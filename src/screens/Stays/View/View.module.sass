@@ -10,14 +10,45 @@
         display: block
         margin-bottom: 32px
 
+.main__center 
+    width: 100%
+    max-width: 1440px
+    margin: 0 auto
+    padding: 0 80px
+
+.section
+    padding-top: 150px
+
+.title
+    font-size: 48px;
+    line-height: 1.16667;
+    letter-spacing: -.02em;
+    font-weight: 600;
+
 .details
     max-width: 540px
     margin-right: auto
 
 .button
-    +m
-        width: 100%
-        margin-top: 32px
+    display: inline-flex
+    justify-content: center;
+    align-items: center;
+    height: 48px;
+    padding: 0 24px;
+    background: #3B71FE;
+    border-radius: 24px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    color: #FCFCFD;
+    transition: all .2s;
+
+.button:hover
+    background: #0142eb;
+
+
 
 .preview
     position: relative

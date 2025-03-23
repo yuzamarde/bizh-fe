@@ -6,9 +6,9 @@ import Icon from "../../../../components/Icon";
 
 const Card = ({ className, item }) => {
   return (
-    <Link className={cn(className, styles.card)} href={item.url}>
+    <Link className={cn(className, styles.card)} href={`/stays-product/${item.slug}`}>
       <div className={styles.preview}>
-        <img srcSet={`${item.image2x} 2x`} src={item.image} alt="Card" />
+        <img srcSet={`${item.image2x} 2x`} src={item.image} alt={item.title} />
       </div>
       <div className={styles.body}>
         <div className={styles.line}>

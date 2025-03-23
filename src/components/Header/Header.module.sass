@@ -183,3 +183,27 @@
             transform: translateY(-4px)
         &:after
             transform: translateY(3px)
+
+.button__small
+    height: 40px
+    border-radius: 20px
+    padding: 0 16px
+    font-size: 14px
+    margin-left: 30px
+
+.button__stroke
+    background: none
+    box-shadow: 0 0 0 2px #E6E8EC inset
+    color: #23262F
+    display: flex
+    align-items: center
+    cursor: pointer
+    +dark
+        color: #FCFCFD;
+
+.button__stroke:hover   
+    background: #E6E8EC;
+    color: #23262F;
+    +dark
+        color: #FCFCFD;
+        background: #23262F;

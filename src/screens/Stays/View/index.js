@@ -6,7 +6,7 @@ import Play from "../../../components/Play";
 
 const View = () => {
   return (
-    <div className={cn("section", styles.section)}>
+    <div className={cn(styles.main__center, styles.section)}>
       <div className={cn("container", styles.container)}>
         <div className={styles.head}>
           <div className={styles.details}>
@@ -22,7 +22,7 @@ const View = () => {
         <div className={styles.body}>
           <div className={styles.preview}>
             <img src="/images/content/video-bg.jpg" alt="Video bg" />
-            <Play className="play" />
+            <Play className={cn("play", styles.play)} />
           </div>
         </div>
       </div>

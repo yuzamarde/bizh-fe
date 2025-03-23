@@ -35,7 +35,7 @@ const items = [
 
 const Work = () => {
   return (
-    <div className={cn("section", styles.section)}>
+    <div className={cn(styles.center, styles.section)}>
       <div className={cn("container", styles.container)}>
         <div className={styles.head}>
           <h2 className={cn("h2", styles.title)}>How it work</h2>

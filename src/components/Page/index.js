@@ -32,7 +32,7 @@ const Page = ({
       />
       {/* <div className={styles.inner}>{children}</div>
         {!fooferHide && } */}
-      <Footer />
+
     </div>
   );
 };

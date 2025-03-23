@@ -1,88 +1,71 @@
-"use client";
-
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import cn from "classnames";
-import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
 import styles from "./DateRange.module.sass";
 import Icon from "../Icon";
 
 const DateRange = ({
   className,
-  icon = "calendar", // default icon
+  icon,
   description,
-  startDatePlaceholderText = "Start date",
-  endDatePlaceholderText = "End date",
-  displayFormat = "yyyy-MM-dd",
+  startDatePlaceholderText,
+  endDatePlaceholderText,
+  displayFormat,
   small,
   bodyDown,
 }) => {
   const [startDate, setStartDate] = useState(null);
   const [endDate, setEndDate] = useState(null);
-  const [mounted, setMounted] = useState(false);
+  const [focusedInput, setFocusedInput] = useState(startDate);
 
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted) return null;
+  // const orientation = window.matchMedia("(max-width: 400px)").matches
+  //   ? "vertical"
+  //   : "horizontal";
 
   return (
     <div
       className={cn(
         className,
+        { small: small },
+        { bodyDown: bodyDown },
         { [styles.small]: small },
-        { [styles.bodyDown]: bodyDown },
         styles.date
       )}
     >
       <div className={styles.head}>
         <div className={styles.list}>
           <div className={styles.box}>
-            {icon && (
-              <div className={styles.icon}>
-                <Icon name={icon} size="24" />
-              </div>
-            )}
+            <div className={styles.icon}>
+              <Icon name={icon} size="24" />
+            </div>
             {description && (
               <div className={styles.description}>{description}</div>
             )}
           </div>
+          <div className={styles.box}>
+            <div className={styles.icon}>
+              <Icon name={icon} size="24" />
+            </div>
+            <div className={styles.description}>{description}</div>
+          </div>
         </div>
-
-        <div className={styles.pickers}>
-          {/* Start Date Picker */}
-          <DatePicker
-            selected={startDate}
-            onChange={(date) => {
-              setStartDate(date);
-              if (endDate && date > endDate) {
-                setEndDate(null);
-              }
-            }}
-            selectsStart
-            startDate={startDate}
-            endDate={endDate}
-            placeholderText={startDatePlaceholderText}
-            dateFormat={displayFormat}
-            className={styles.input}
-            showPopperArrow={false}
-          />
-
-          {/* End Date Picker */}
-          <DatePicker
-            selected={endDate}
-            onChange={(date) => setEndDate(date)}
-            selectsEnd
-            startDate={startDate}
-            endDate={endDate}
-            minDate={startDate}
-            placeholderText={endDatePlaceholderText}
-            dateFormat={displayFormat}
-            className={styles.input}
-            showPopperArrow={false}
-          />
-        </div>
+        {/* <div
+          startDatePlaceholderText={startDatePlaceholderText}
+          endDatePlaceholderText={endDatePlaceholderText}
+          readOnly
+          noBorder
+          startDate={startDate}
+          startDateId="your_unique_start_date_id"
+          endDate={endDate}
+          endDateId="your_unique_end_date_id"
+          onDatesChange={({ startDate, endDate }) => {
+            setStartDate(startDate);
+            setEndDate(endDate);
+          }}
+          focusedInput={focusedInput}
+          onFocusChange={(focusedInput) => setFocusedInput(focusedInput)}
+          displayFormat={displayFormat}
+          orientation={orientation}
+        /> */}
       </div>
     </div>
   );

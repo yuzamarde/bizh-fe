@@ -10,7 +10,7 @@ const Play = ({ className, small }) => {
         [styles.small]: small,
       })}
     >
-      <Icon name="play" size="24" />
+      <Icon name="play" size="24" className={cn("icon", styles.icon)} />
     </button>
   );
 };

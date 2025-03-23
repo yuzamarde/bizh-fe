@@ -43,7 +43,7 @@ const Places = ({ title, info, classSection }) => {
   };
 
   return (
-    <div className={cn("section", classSection, styles.section)}>
+    <div className={cn(styles.main__center, classSection, styles.section)}>
       <div className={cn("container", styles.container)}>
         <div className={styles.inner}>
           <div className={styles.head}>

@@ -4,7 +4,8 @@ export const catalogList = [
     icon: "coin",
     items: [
       {
-        title: "The grand resort",
+        slug: "the-grand-resort-karineside",
+        title: "The Karineside grand resort",
         location: "Karineside",
         priceOld: "$699",
         priceActual: "$548",
@@ -15,7 +16,8 @@ export const catalogList = [
         url: "/stays-product",
       },
       {
-        title: "The grand resort",
+        slug: "the-grand-resort-East-Barrett",
+        title: "The Barrett grand East ",
         location: "East Barrett",
         priceOld: "$699",
         priceActual: "$548",
@@ -23,10 +25,10 @@ export const catalogList = [
         rating: "4.8",
         image: "/images/content/catalog-pic-2.jpg",
         image2x: "/images/content/catalog-pic-2@2x.jpg",
-        url: "/stays-product",
       },
       {
-        title: "The grand resort",
+        slug: "the-grand-Steuberbury",
+        title: "The Steuberbury grand East",
         location: "Steuberbury",
         priceOld: "$699",
         priceActual: "$548",
@@ -37,7 +39,8 @@ export const catalogList = [
         url: "/stays-product",
       },
       {
-        title: "The grand resort",
+        slug: "the-grand-Idaview",
+        title: "The Idaview grand resort",
         location: "Idaview",
         priceOld: "$699",
         priceActual: "$548",
@@ -48,7 +51,8 @@ export const catalogList = [
         url: "/stays-product",
       },
       {
-        title: "The grand resort",
+        slug: "the-grand-Yasminfurt",
+        title: "The Yasminfurt grand resort",
         location: "Yasminfurt",
         priceOld: "$699",
         priceActual: "$548",
@@ -59,7 +63,8 @@ export const catalogList = [
         url: "/stays-product",
       },
       {
-        title: "The grand resort",
+        slug: "the-grand-North-Edenshire",
+        title: "The North Edenshire grand resort",
         location: "North Edenshire",
         priceOld: "$699",
         priceActual: "$548",
@@ -70,7 +75,8 @@ export const catalogList = [
         url: "/stays-product",
       },
       {
-        title: "The grand resort",
+        slug: "the-grand-Archibaldtown",
+        title: "The Archibaldtown grand resort",
         location: "Archibaldtown",
         priceOld: "$699",
         priceActual: "$548",
@@ -81,7 +87,8 @@ export const catalogList = [
         url: "/stays-product",
       },
       {
-        title: "The grand resort",
+        slug: "the-grand-West-Gregoria",
+        title: "The West Gregoria grand resort",
         location: "West Gregoria",
         priceOld: "$699",
         priceActual: "$548",
@@ -98,6 +105,7 @@ export const catalogList = [
     icon: "coin",
     items: [
       {
+        slug: "the-grand-West-Karineside",
         title: "The grand resort",
         location: "Karineside",
         priceOld: "$699",
@@ -109,7 +117,8 @@ export const catalogList = [
         url: "/stays-product",
       },
       {
-        title: "The grand resort",
+        slug: "the-grand-West-East-Barrett",
+        title: "The East Barrett grand resort",
         location: "East Barrett",
         priceOld: "$699",
         priceActual: "$548",
@@ -120,7 +129,8 @@ export const catalogList = [
         url: "/stays-product",
       },
       {
-        title: "The grand resort",
+        slug: "the-grand-West-Steuberbury",
+        title: "The Steuberbury grand resort",
         location: "Steuberbury",
         priceOld: "$699",
         priceActual: "$548",
@@ -131,7 +141,8 @@ export const catalogList = [
         url: "/stays-product",
       },
       {
-        title: "The grand resort",
+        slug: "the-grand-West-Idaview",
+        title: "The Idaview grand resort",
         location: "Idaview",
         priceOld: "$699",
         priceActual: "$548",
@@ -142,7 +153,8 @@ export const catalogList = [
         url: "/stays-product",
       },
       {
-        title: "The grand resort",
+        slug: "the-grand-West-Yasminfurt",
+        title: "The Yasminfurt grand resort",
         location: "Yasminfurt",
         priceOld: "$699",
         priceActual: "$548",
@@ -153,7 +165,8 @@ export const catalogList = [
         url: "/stays-product",
       },
       {
-        title: "The grand resort",
+        slug: "the-grand-West-North-Edenshire",
+        title: "The North Edenshire grand resort",
         location: "North Edenshire",
         priceOld: "$699",
         priceActual: "$548",
@@ -164,7 +177,8 @@ export const catalogList = [
         url: "/stays-product",
       },
       {
-        title: "The grand resort",
+        slug: "the-grand-West-Archibaldtown",
+        title: "The Archibaldtown grand resort",
         location: "Archibaldtown",
         priceOld: "$699",
         priceActual: "$548",
@@ -175,7 +189,8 @@ export const catalogList = [
         url: "/stays-product",
       },
       {
-        title: "The grand resort",
+        slug: "the-grand-West-West-Gregoria",
+        title: "The West Gregoria grand resort",
         location: "West Gregoria",
         priceOld: "$699",
         priceActual: "$548",
@@ -192,7 +207,8 @@ export const catalogList = [
     icon: "coin",
     items: [
       {
-        title: "The grand resort",
+        slug: "the-grand-resort-karineside",
+        title: "The Karineside grand resort",
         location: "Karineside",
         priceOld: "$699",
         priceActual: "$548",
@@ -203,7 +219,8 @@ export const catalogList = [
         url: "/stays-product",
       },
       {
-        title: "The grand resort",
+        slug: "the-grand-resort-East-Barrett",
+        title: "The Barrett grand East ",
         location: "East Barrett",
         priceOld: "$699",
         priceActual: "$548",
@@ -214,7 +231,8 @@ export const catalogList = [
         url: "/stays-product",
       },
       {
-        title: "The grand resort",
+        slug: "the-grand-Steuberbury",
+        title: "The Steuberbury grand East",
         location: "Steuberbury",
         priceOld: "$699",
         priceActual: "$548",
@@ -225,7 +243,8 @@ export const catalogList = [
         url: "/stays-product",
       },
       {
-        title: "The grand resort",
+        slug: "the-grand-Idaview",
+        title: "The Idaview grand resort",
         location: "Idaview",
         priceOld: "$699",
         priceActual: "$548",
@@ -236,7 +255,8 @@ export const catalogList = [
         url: "/stays-product",
       },
       {
-        title: "The grand resort",
+        slug: "the-grand-Yasminfurt",
+        title: "The Yasminfurt grand resort",
         location: "Yasminfurt",
         priceOld: "$699",
         priceActual: "$548",
@@ -247,7 +267,8 @@ export const catalogList = [
         url: "/stays-product",
       },
       {
-        title: "The grand resort",
+        slug: "the-grand-North-Edenshire",
+        title: "The North Edenshire grand resort",
         location: "North Edenshire",
         priceOld: "$699",
         priceActual: "$548",
@@ -258,7 +279,8 @@ export const catalogList = [
         url: "/stays-product",
       },
       {
-        title: "The grand resort",
+        slug: "the-grand-Archibaldtown",
+        title: "The Archibaldtown grand resort",
         location: "Archibaldtown",
         priceOld: "$699",
         priceActual: "$548",
@@ -269,7 +291,8 @@ export const catalogList = [
         url: "/stays-product",
       },
       {
-        title: "The grand resort",
+        slug: "the-grand-West-Gregoria",
+        title: "The West Gregoria grand resort",
         location: "West Gregoria",
         priceOld: "$699",
         priceActual: "$548",
@@ -286,7 +309,8 @@ export const catalogList = [
     icon: "coin",
     items: [
       {
-        title: "The grand resort",
+        slug: "the-grand-resort-karineside",
+        title: "The Karineside grand resort",
         location: "Karineside",
         priceOld: "$699",
         priceActual: "$548",
@@ -297,7 +321,8 @@ export const catalogList = [
         url: "/stays-product",
       },
       {
-        title: "The grand resort",
+        slug: "the-grand-resort-East-Barrett",
+        title: "The Barrett grand East ",
         location: "East Barrett",
         priceOld: "$699",
         priceActual: "$548",
@@ -308,7 +333,8 @@ export const catalogList = [
         url: "/stays-product",
       },
       {
-        title: "The grand resort",
+        slug: "the-grand-Steuberbury",
+        title: "The Steuberbury grand East",
         location: "Steuberbury",
         priceOld: "$699",
         priceActual: "$548",
@@ -319,7 +345,8 @@ export const catalogList = [
         url: "/stays-product",
       },
       {
-        title: "The grand resort",
+        slug: "the-grand-Idaview",
+        title: "The Idaview grand resort",
         location: "Idaview",
         priceOld: "$699",
         priceActual: "$548",
@@ -330,7 +357,8 @@ export const catalogList = [
         url: "/stays-product",
       },
       {
-        title: "The grand resort",
+        slug: "the-grand-Yasminfurt",
+        title: "The Yasminfurt grand resort",
         location: "Yasminfurt",
         priceOld: "$699",
         priceActual: "$548",
@@ -341,7 +369,8 @@ export const catalogList = [
         url: "/stays-product",
       },
       {
-        title: "The grand resort",
+        slug: "the-grand-North-Edenshire",
+        title: "The North Edenshire grand resort",
         location: "North Edenshire",
         priceOld: "$699",
         priceActual: "$548",
@@ -352,7 +381,8 @@ export const catalogList = [
         url: "/stays-product",
       },
       {
-        title: "The grand resort",
+        slug: "the-grand-Archibaldtown",
+        title: "The Archibaldtown grand resort",
         location: "Archibaldtown",
         priceOld: "$699",
         priceActual: "$548",
@@ -363,7 +393,8 @@ export const catalogList = [
         url: "/stays-product",
       },
       {
-        title: "The grand resort",
+        slug: "the-grand-West-Gregoria",
+        title: "The West Gregoria grand resort",
         location: "West Gregoria",
         priceOld: "$699",
         priceActual: "$548",

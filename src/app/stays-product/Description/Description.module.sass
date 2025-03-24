@@ -1,8 +1,8 @@
 @import ../../../styles/helpers
 
 .section
-    padding-bottom: 136px
-    border-bottom: 1px solid $n6
+    padding-bottom: 50px
+    padding-top: 100px
     +d
         margin-bottom: 80px
         padding-bottom: 80px
@@ -11,6 +11,15 @@
         padding-bottom: 64px
     +dark
         border-color: $n2
+
+.center 
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 80px;
+    @media (max-width: 767px) // ⬅️ untuk HP (tablet ke bawah)
+        padding: 0 10px
+    
 
 .wrapper
     display: flex
@@ -32,6 +41,7 @@
 
 .btns
     display: flex
+    gap: 10px
     margin-bottom: 32px
     .button
         &:first-child
@@ -85,3 +95,53 @@
         color: $p1
         svg
             fill: $p1
+
+.button__small
+    height: 40px
+    border-radius: 20px
+    padding: 0 16px
+    font-size: 14px
+
+.button__stroke
+    background: none
+    box-shadow: 0 0 0 2px #E6E8EC inset
+    color: #23262F
+    display: flex
+    align-items: center
+    justify-content: center
+    cursor: pointer
+    +dark
+        color: #FCFCFD;
+
+.button__stroke__blue
+    background: #3B71FE
+    color: #FCFCFD
+    display: flex
+    align-items: center
+    justify-content: center
+    cursor: pointer
+
+
+.button__stroke__blue:hover   
+    background: #0142eb;
+    color: #FCFCFD;
+
+
+
+.button__stroke:hover   
+    background: #E6E8EC;
+    color: #23262F;
+    +dark
+        color: #FCFCFD;
+        background: #353945;
+        box-shadow: 0 0 0 2px #353945 inset
+
+.icon__arrow__left
+    margin-left: 8px;
+    fill: #23262F;
+    +dark
+        fill: #FCFCFD; 
+
+.icon__arrow__reserve
+    margin-left: 8px;
+    fill: #FCFCFD;

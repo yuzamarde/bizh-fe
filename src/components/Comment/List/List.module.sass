@@ -1,0 +1,118 @@
+@import ../../../styles/helpers
+
+.title
+    margin-right: auto
+    +body-bold-1
+
+.head
+    display: flex
+    align-items: center
+    margin-bottom: 32px
+    +m
+        display: none
+    .dropdown
+        width: 160px
+
+.item
+    display: flex
+    align-items: flex-start
+    padding-bottom: 24px
+    border-bottom: 1px solid $n6
+    +dark
+        border-color: $n3
+    &:not(:last-child)
+        margin-bottom: 24px
+
+.avatar
+    flex-shrink: 0
+    width: 48px
+    height: 48px
+    margin-right: 20px
+    +m
+        margin-right: 14px
+    img
+        width: 100%
+        height: 100%
+        border-radius: 50%
+        object-fit: cover
+    
+.details
+    flex-grow: 1
+
+.top
+    display: flex
+    margin-bottom: 4px
+
+.author
+    margin-right: auto
+    font-weight: 500
+
+.rating
+    position: relative
+    top: -2px
+    margin-left: 8px
+    flex-shrink: 0
+
+.content
+    margin-bottom: 8px
+    color: $n3
+    +dark
+        color: $n5
+
+.time
+    +caption-2
+    color: $n4
+
+.foot
+    display: flex
+    align-items: center
+
+.actions
+    display: flex
+
+.action
+    margin-left: 16px
+    +poppins
+    +caption-bold-2
+    transition: color .2s
+    +dark
+        color: $n8
+    &:hover
+        color: $p1
+
+.btns
+    margin-top: 32px
+    display: flex
+    text-align: center;
+    justify-content: center
+
+.button
+    .loader
+        margin: 0 16px 0 5px
+        transform: scale(.8)
+
+.button__small
+    height: 40px
+    border-radius: 20px
+    padding: 0 16px
+    font-size: 14px
+
+.button__stroke
+    background: none
+    box-shadow: 0 0 0 2px #E6E8EC inset
+    color: #23262F
+    display: flex
+    align-items: center
+    justify-content: center
+    cursor: pointer
+    +dark
+        color: #FCFCFD;
+    
+.button__stroke:hover   
+    background: #23262F;
+    box-shadow: 0 0 0 0px #E6E8EC inset
+    color: #E6E8EC;
+    +dark
+        color: #FCFCFD;
+        background: #353945;
+        box-shadow: 0 0 0 2px #353945 inset

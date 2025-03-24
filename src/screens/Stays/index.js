@@ -25,8 +25,8 @@ const Stays = () => {
       <Work />
       <Catalog />
       <Planning title="Travel to make memories all around the world" />
-      <Places title="Explore nearby" info="10,789 beautiful places to go" />
-      <View />
+      {/* <Places title="Explore nearby" info="10,789 beautiful places to go" /> */}
+      {/* <View /> */}
 
     </>
   );

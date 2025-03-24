@@ -4,17 +4,254 @@ export const catalogList = [
     icon: "coin",
     items: [
       {
-        slug: "the-grand-resort-karineside",
-        title: "The Karineside grand resort",
-        location: "Karineside",
-        priceOld: "$699",
-        priceActual: "$548",
-        date: "Tue, Jul 20 - Fri, Jul 23",
-        rating: "5.0",
-        image: "/images/content/catalog-pic-1.jpg",
-        image2x: "/images/content/catalog-pic-1@2x.jpg",
+        slug: "the-grand-resort-Bizh-Bandung",
+        title: "The Bizh Bandung",
+        class: "Regular Family class",
+        province: "West Java",
+        location: "Bandung",
+        priceOld: 699000,
+        priceActual: 548000,
+        discount: "10%",
+        fee: 10000,
+        rating: "4.3",
+        reviews: "250 reviews",
+        name: "admin 021",
+        avatar: "/images/content/avatar-variant-2.jpg",
+        image: "/images/content/card-pic-12.jpg",
+        image2x: "/images/content/card-pic-6.jpg",
+        gallery: [
+          "/images/content/photo-2.2.jpg",
+          "/images/content/photo-3.1.jpg",
+          "/images/content/photo-4.1.jpg",
+          "/images/content/photo-4.3.jpg",
+        ],
         url: "/stays-product",
+        description: "Bagaimana tren HR akan berubah di tahun 2025? Dari strategi rekrutmen global, penerapan AI dalam sistem rekrutmen hingga gaji tech talent yang semakin kompetitif. Pelajari semua yang perlu Anda ketahui dalam eBook Cake: Tren HR Indonesia 2025 dan siapkan perusahaan Anda untuk masa depan!",
+        availableService: [
+          {
+            regulars: [
+              {
+                rooms: [
+                  {
+                    title: "4 guests",
+                    icon: "home",
+                  },
+                  {
+                    title: "2 bedroom",
+                    icon: "flag",
+                  },
+                  {
+                    title: "1 private bath",
+                    icon: "flag",
+                  },
+                ],
+                service: [
+                  {
+                    title: "Free wifi 24/7",
+                    icon: "modem",
+                  },
+                  {
+                    title: "Free clean bathroom",
+                    icon: "toilet-paper",
+                  },
+                  {
+                    title: "Free computer",
+                    icon: "monitor",
+                  },
+                  {
+                    title: "Breakfast included",
+                    icon: "burger",
+                  },
+                  {
+                    title: "Free wifi 24/7",
+                    icon: "medical-case",
+                  },
+                  {
+                    title: "ATM",
+                    icon: "credit-card",
+                  },
+                  {
+                    title: "Free wifi 24/7",
+                    icon: "modem",
+                  },
+                  {
+                    title: "Nearby city",
+                    icon: "building",
+                  },
+                ],
+              },
+            ],
+          },
+        ],
+        options: [
+          {
+            title: "Superhost",
+            icon: "home",
+          },
+          {
+            title: "The Bizh Bandung, West Java, Indonesia",
+            icon: "flag",
+          },
+        ],
+        socials: [
+          {
+            title: "twitter",
+            url: "https://twitter.com",
+          },
+          {
+            title: "instagram",
+            url: "https://www.instagram.com",
+          },
+          {
+            title: "facebook",
+            url: "https://www.facebook.com",
+          },
+        ],
+        parametersUser: [
+          {
+            title: "250 reviews",
+            icon: "star-outline",
+          },
+        ],
+        comments: [
+          {
+            avatar: "/images/content/avatar-4.jpg",
+            name: "pablo",
+            rating: 4,
+            text: "Bagaimana cara menuju Taman Safari Bogor dari Jakarta?",
+          },
+          {
+            avatar: "/images/content/avatar-5.jpg",
+            name: "erikson",
+            rating: 4.3,
+            text: "Tidak menyentuh koleksi dan melakukan kegiatan yang dapat merusak benda-benda cagar budaya.",
+          },
+          {
+            avatar: "/images/content/avatar-3.jpg",
+            name: "marko",
+            rating: 3.3,
+            text: "Museum Nasional merupakan museum pertama dan terbesar di Asia Tenggara.",
+          },
+        ]
       },
+      {
+        slug: "the-grand-resort-Bizh-tanggerang",
+        title: "The Bizh Tanggerang",
+        class: "Middle Family class",
+        province: "Banten",
+        location: "Banten",
+        priceOld: 299000,
+        priceActual: 348000,
+        discount: "5%",
+        fee: 15000,
+        rating: "3.3",
+        reviews: "156 reviews",
+        avatar: "/images/content/avatar-variant-3.jpg",
+        name: "admin 029",
+        image: "/images/content/browse-pic-3.jpg",
+        image2x: "/images/content/cars-pic-1.jpg",
+        gallery: [
+          "/images/content/photo-1.2.jpg",
+          "/images/content/photo-3.2.jpg",
+          "/images/content/photo-2.1.jpg",
+          "/images/content/photo-4.3.jpg",
+        ],
+        url: "/stays-product",
+        description: "Siap-siap untuk petualangan tak terlupakan di Taman Safari Indonesia Bogor! Kamu bisa mengendarai mobil pribadi atau naik bus Safari Park untuk merasasakan Safari Journey dan dibuat terkagum-kagum dengan lebih dari 3.000 hewan dari 300 spesies yang berkeliaran bebas seperti di habitat alami mereka. Rasakan sensasi memberi makan dan berinteraksi langsung dengan satwa-satwa ini!",
+        availableService: [
+          {
+            regulars: [
+              {
+                rooms: [
+                  {
+                    title: "2 guests",
+                    icon: "home",
+                  },
+                  {
+                    title: "2 bedroom",
+                    icon: "flag",
+                  },
+                  {
+                    title: "1 private bath",
+                    icon: "flag",
+                  },
+                ],
+                service: [
+                  {
+                    title: "Free wifi 24/7",
+                    icon: "modem",
+                  },
+                  {
+                    title: "Free clean bathroom",
+                    icon: "toilet-paper",
+                  },
+                  {
+                    title: "Free computer",
+                    icon: "monitor",
+                  },
+                  {
+                    title: "Breakfast included",
+                    icon: "burger",
+                  },
+                  {
+                    title: "Medical tools",
+                    icon: "medical-case",
+                  },
+                  {
+                    title: "Nearby city",
+                    icon: "building",
+                  },
+                ],
+              },
+            ],
+          },
+        ],
+        options: [
+          {
+            title: "Superhost",
+            icon: "home",
+          },
+          {
+            title: "The Bizh Bandung, West Java, Indonesia",
+            icon: "flag",
+          },
+        ],
+        socials: [
+          {
+            title: "twitter",
+            url: "https://twitter.com",
+          },
+          {
+            title: "instagram",
+            url: "https://www.instagram.com",
+          },
+          {
+            title: "facebook",
+            url: "https://www.facebook.com",
+          },
+        ],
+        parametersUser: [
+          {
+            title: "156 reviews",
+            icon: "star-outline",
+          },
+        ],
+        comments: [
+          {
+            avatar: "/images/content/avatar-1.jpg",
+            name: "reguso",
+            rating: 4,
+            text: "Bagaimana cara menuju Taman Safari Bogor dari Jakarta?",
+          },
+          {
+            avatar: "/images/content/avatar-5.jpg",
+            name: "elina",
+            rating: 4.3,
+            text: "Tidak membawa senjata, tidak merokok, membawa binatang peliharaan, dan tidak makan dan minum di ruang pameran.",
+          },
+        ]
+      },
+
       {
         slug: "the-grand-resort-East-Barrett",
         title: "The Barrett grand East ",

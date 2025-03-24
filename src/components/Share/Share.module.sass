@@ -106,3 +106,40 @@
                 background: $p1
                 svg
                     fill: $n8
+
+
+.button__stroke
+    display: flex
+    justify-content: center;
+    flex: 0 0 44px;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border-radius: 50%;
+    box-shadow: 0 0 0 2px #E6E8EC inset;
+    background: transparent;
+    transition: all .2s;
+    background: none
+    box-shadow: 0 0 0 2px #E6E8EC inset
+    color: #23262F
+    display: flex
+    align-items: center
+    cursor: pointer
+    +dark
+        color: #FCFCFD;
+        box-shadow: 0 0 0 2px #23262F inset
+
+.button__stroke:hover   
+    background: #E6E8EC;
+    color: #23262F;
+    +dark
+        color: #FCFCFD;
+        background: #23262F;
+
+.button__svg
+    fill: #777E90;
+
+.button__stroke:hover .button__svg
+    fill: #23262F;
+    +dark
+        fill: #ffffff;

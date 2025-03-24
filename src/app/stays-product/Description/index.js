@@ -8,12 +8,12 @@ import Receipt from "../../../components/Receipt";
 
 const items = [
   {
-    title: "May 15, 2021",
+    title: "May 15, 2024",
     category: "Check-in",
     icon: "calendar",
   },
   {
-    title: "May 22, 2021",
+    title: "May 22, 2024",
     category: "Check-out",
     icon: "calendar",
   },
@@ -24,58 +24,105 @@ const items = [
   },
 ];
 
-const receipt = [
-  {
-    title: "$119 x 7 nights",
-    content: "$833",
-  },
-  {
-    title: "10% campaign discount",
-    content: "-$125",
-  },
-  {
-    title: "Service fee",
-    content: "$103",
-  },
-  {
-    title: "Total",
-    content: "$833",
-  },
-];
+const Description = ({
+  classSection,
+  description,
+  availableService,
+  priceOld,
+  priceActual,
+  discount,
+  fee,
+  reviews,
+  rating,
+  name,
+  avatar,
+  parametersUser,
+}) => {
+  // 💰 Hitung total
+  const discountValue = parseFloat(discount?.replace("%", "") || "0") / 100;
+  const priceActualNum = Number(priceActual) || 0;
+  const feeNum = Number(fee) || 0;
+  const total = priceActualNum - (priceActualNum * discountValue) + feeNum;
 
-const Description = ({ classSection }) => {
   return (
     <div className={cn(classSection, styles.section)}>
-      <div className={cn("container", styles.container)}>
+      <div className={cn(styles.center, styles.container)}>
         <div className={styles.wrapper}>
-          <Details className={styles.details} />
+          <Details
+            className={styles.details}
+            description={description}
+            name={name}
+            avatar={avatar}
+            availableService={availableService}
+          />
           <Receipt
             className={styles.receipt}
             items={items}
-            priceOld="$119"
-            priceActual="$109"
-            time="night"
+            description={description}
+            priceOld={priceOld}
+            priceActual={priceActual}
+            discount={discount}
+            avatar={avatar}
+            fee={fee}
+            rating={rating}
+            reviews={reviews}
+
+            parametersUser={parametersUser}
           >
             <div className={styles.btns}>
-              <button className={cn("button-stroke", styles.button)}>
+              <button
+                className={cn(
+                  styles.button__small,
+                  styles.button__stroke,
+                  styles.button
+                )}
+              >
                 <span>Save</span>
-                <Icon name="plus" size="16" />
+                <Icon
+                  name="plus"
+                  size="16"
+                  className={cn(styles.icon__arrow__left)}
+                />
               </button>
               <Link
-                className={cn("button", styles.button)}
+                className={cn(
+                  styles.button__small,
+                  styles.button__stroke__blue,
+                  styles.button
+                )}
                 href="/stays-checkout"
               >
                 <span>Reserve</span>
-                <Icon name="bag" size="16" />
+                <Icon
+                  name="bag"
+                  size="16"
+                  className={cn(styles.icon__arrow__reserve)}
+                />
               </Link>
             </div>
             <div className={styles.table}>
-              {receipt.map((x, index) => (
-                <div className={styles.line} key={index}>
-                  <div className={styles.cell}>{x.title}</div>
-                  <div className={styles.cell}>{x.content}</div>
+              <div className={styles.line}>
+                <div className={styles.cell}>1 night</div>
+                <div className={styles.cell}>
+                  IDR {Number(priceActual).toLocaleString("id-ID")}
                 </div>
-              ))}
+              </div>
+              <div className={styles.line}>
+                <div className={styles.cell}>discount</div>
+                <div className={styles.cell}>{discount}</div>
+              </div>
+              <div className={styles.line}>
+                <div className={styles.cell}>fee</div>
+                <div className={styles.cell}>
+                  IDR {Number(fee).toLocaleString("id-ID")}
+                </div>
+              </div>
+              <div className={styles.line}>
+                <div className={styles.cell}>Total</div>
+                <div className={styles.cell}>
+                  IDR {total.toLocaleString("id-ID")}
+                </div>
+              </div>
             </div>
             <div className={styles.foot}>
               <button className={styles.report}>

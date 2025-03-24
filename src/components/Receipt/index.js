@@ -10,24 +10,27 @@ const Receipt = ({
   priceOld,
   priceActual,
   time,
+  rating,
+  avatar,
+  reviews
 }) => {
   return (
     <div className={cn(className, styles.receipt)}>
       <div className={styles.head}>
         <div className={styles.details}>
           <div className={styles.cost}>
-            <div className={styles.old}>{priceOld}</div>
-            <div className={styles.actual}>{priceActual}</div>
-            <div className={styles.note}>/{time}</div>
+            <div className={styles.old}>IDR {priceOld}</div>
+            <div className={styles.actual}>IDR {priceActual}</div>
+            <div className={styles.note}>{time}</div>
           </div>
           <div className={styles.rating}>
             <Icon name="star" size="20" />
-            <div className={styles.number}>4.8</div>
-            <div className={styles.reviews}>(256 reviews)</div>
+            <div className={styles.number}>{rating}</div>
+            <div className={styles.reviews}>{reviews}</div>
           </div>
         </div>
         <div className={styles.avatar}>
-          <img src="/images/content/avatar.jpg" alt="Avatar" />
+          <img src={avatar} alt="Avatar" />
           <div className={styles.check}>
             <Icon name="check" size="12" />
           </div>

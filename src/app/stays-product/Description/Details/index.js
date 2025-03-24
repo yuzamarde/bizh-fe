@@ -3,67 +3,31 @@ import cn from "classnames";
 import styles from "./Details.module.sass";
 import Icon from "../../../../components/Icon";
 
-const parameters = [
-  {
-    title: "2 guests",
-    icon: "home",
-  },
-  {
-    title: "1 bedroom",
-    icon: "flag",
-  },
-  {
-    title: "1 private bath",
-    icon: "flag",
-  },
-];
+const Details = ({
+  className,
+  description,
+  name,
+  avatar,
+  availableService = [],
+}) => {
+  // Ambil data dari availableService[0].regulars[0]
+  const regularService = availableService[0]?.regulars?.[0] || {};
+  const parameters = regularService.rooms || [];
+  const options = regularService.service || [];
 
-const options = [
-  {
-    title: "Free wifi 24/7",
-    icon: "modem",
-  },
-  {
-    title: "Free clean bathroom",
-    icon: "toilet-paper",
-  },
-  {
-    title: "Free computer",
-    icon: "monitor",
-  },
-  {
-    title: "Breakfast included",
-    icon: "burger",
-  },
-  {
-    title: "Free wifi 24/7",
-    icon: "medical-case",
-  },
-  {
-    title: "ATM",
-    icon: "credit-card",
-  },
-  {
-    title: "Free wifi 24/7",
-    icon: "modem",
-  },
-  {
-    title: "Nearby city",
-    icon: "building",
-  },
-];
-
-const Details = ({ className }) => {
   return (
     <div className={cn(className, styles.details)}>
-      <h4 className={cn("h4", styles.title)}>Private room in house</h4>
+      <h4 className={cn(styles.h4, styles.title)}>Private room in house</h4>
+
       <div className={styles.profile}>
         <span>Hosted by</span>
         <div className={styles.avatar}>
-          <img src="/images/content/avatar.jpg" alt="Avatar" />
+          <img src={avatar} alt="Avatar" />
         </div>
-        <div className={styles.name}>Zoe Towne</div>
+        <div className={styles.name}>{name}</div>
       </div>
+
+      {/* Parameters (guest, bedroom, bath) */}
       <div className={styles.parameters}>
         {parameters.map((x, index) => (
           <div className={styles.parameter} key={index}>
@@ -72,23 +36,11 @@ const Details = ({ className }) => {
           </div>
         ))}
       </div>
-      <div className={styles.content}>
-        <p>
-          Described by Queenstown House & Garden magazine as having 'one of the
-          best views we've ever seen' you will love relaxing in this newly
-          built, architectural house sitting proudly on Queenstown Hill.
-        </p>
-        <p>
-          Enjoy breathtaking 180' views of Lake Wakatipu from your well
-          appointed & privately accessed bedroom with modern en suite and
-          floor-to-ceiling windows.
-        </p>
-        <p>
-          Your private patio takes in the afternoon sun, letting you soak up
-          unparalleled lake and mountain views by day and the stars & city
-          lights by night.
-        </p>
-      </div>
+
+      {/* Deskripsi */}
+      <div className={styles.content}>{description}</div>
+
+      {/* Amenities */}
       <div className={styles.info}>Amenities</div>
       <div className={styles.options}>
         {options.map((x, index) => (
@@ -98,7 +50,10 @@ const Details = ({ className }) => {
           </div>
         ))}
       </div>
-      <button className={cn("button-stroke button-small", styles.button)}>
+
+      <button
+        className={cn(styles.button__small, styles.button__stroke, styles.button)}
+      >
         More detail
       </button>
     </div>

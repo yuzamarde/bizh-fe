@@ -56,7 +56,7 @@ const Header = ({ separatorHeader, wide, notAuthorized }) => {
           { [styles.wide]: wide }
         )}
       >
-        <div className={cn("center", styles.container)}>
+        <div className={cn(styles.center, styles.container)}>
           <Link href="/" className={styles.logo}>
             <Image
               className={styles.pic}

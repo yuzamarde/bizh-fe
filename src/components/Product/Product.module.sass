@@ -8,6 +8,15 @@
     +m
         display: none
 
+.center 
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 80px;
+    @media (max-width: 767px) // ⬅️ untuk HP (tablet ke bawah)
+        padding: 0 10px
+
+
 .head
     display: flex
     align-items: flex-start
@@ -26,6 +35,10 @@
 .title
     max-width: 640px
     margin-bottom: 16px
+    font-size: 48px;
+    line-height: 1.16667;
+    letter-spacing: -.02em;
+    font-weight: 600;
     +m
         font-size: 32px
 
@@ -79,3 +92,5 @@
 
 .actions
     flex-shrink: 0
+
+

@@ -9,10 +9,14 @@ const Control = ({ className, urlHome, breadcrumbs }) => {
   return (
     <div className={cn(className, styles.control)}>
       <Link
-        className={cn("button-stroke button-small", styles.button)}
+        className={cn(styles.button__small, styles.button__stroke, styles.button,)}
         href={urlHome}
       >
-        <Icon name="arrow-left" size="10" />
+        <Icon
+          name="arrow-left"
+          size="10"
+          className={cn(styles.icon__arrow__left)}
+        />
         <span>Go home</span>
       </Link>
       <Breadcrumbs className={styles.breadcrumbs} items={breadcrumbs} />

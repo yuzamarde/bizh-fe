@@ -11,13 +11,16 @@ const Product = ({
   urlHome,
   breadcrumbs,
   title,
+  rating,
+  reviews,
   options,
   gallery,
   type,
+  avatar,
 }) => {
   return (
     <div className={cn(classSection, styles.section)}>
-      <div className={cn("container", styles.container)}>
+      <div className={cn(styles.center, styles.container)}>
         <Control
           className={styles.control}
           urlHome={urlHome}
@@ -28,12 +31,12 @@ const Product = ({
             <h1 className={cn("h2", styles.title)}>{title}</h1>
             <div className={styles.line}>
               <div className={styles.avatar}>
-                <img src="/images/content/avatar-1.jpg" alt="Avatar" />
+                <img src={avatar} alt="Avatar" />
               </div>
               <div className={styles.rating}>
                 <Icon name="star" size="20" />
-                <div className={styles.number}>4.8</div>
-                <div className={styles.reviews}>(256 reviews)</div>
+                <div className={styles.number}>{rating}</div>
+                <div className={styles.reviews}>{reviews}</div>
               </div>
               <div className={styles.options}>
                 {options.map((x, index) => (

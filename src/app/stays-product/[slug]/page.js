@@ -3,91 +3,71 @@ import cn from "classnames";
 import styles from "./StaysProduct.module.sass";
 
 // data
-import { browse1 } from "../../../mocks/browse";
-import { browse2 } from "../../../mocks/browse";
 import Product from "@/components/Product";
 import Description from "../Description";
-import Page from "@/components/Page";
+import Footer from "@/components/Footer";
+import CommentsProduct from "@/components/CommentsProduct";
+import { catalogList } from "@/mocks/catalog";
 
-const breadcrumbs = [
-    {
-        title: "Home",
-        url: "/",
-    },
-    {
-        title: "Stays",
-        url: "/",
-    },
-    {
-        title: "New Zealand",
-        url: "/stays-category",
-    },
-    {
-        title: "South Island",
-    },
-];
 
-const gallery = [
-    "/images/content/photo-1.1.jpg",
-    "/images/content/photo-1.2.jpg",
-    "/images/content/photo-1.3.jpg",
-    "/images/content/photo-1.4.jpg",
-];
 
-const options = [
-    {
-        title: "Superhost",
-        icon: "home",
-    },
-    {
-        title: "Queenstown, Otago, New Zealand",
-        icon: "flag",
-    },
-];
+export default function StaysProduct({ params }) {
+    const { slug } = params;
 
-const parametersUser = [
-    {
-        title: "Superhost",
-        icon: "home",
-    },
-    {
-        title: "256 reviews",
-        icon: "star-outline",
-    },
-];
+    // Gabungkan semua item dari semua group
+    const allItems = catalogList.flatMap((group) => group.items);
 
-const socials = [
-    {
-        title: "twitter",
-        url: "https://twitter.com/ui8",
-    },
-    {
-        title: "instagram",
-        url: "https://www.instagram.com/ui8net/",
-    },
-    {
-        title: "facebook",
-        url: "https://www.facebook.com/ui8.net/",
-    },
-];
+    // Cari berdasarkan slug
+    const item = allItems.find((x) => x.slug === slug);
 
-const StaysProduct = () => {
+    if (!item) return notFound();
+
+    // breadcrumbs berdasarkan data item
+    const breadcrumbs = [
+        { title: "Home", url: "/" },
+        { title: "Stays", url: "/" },
+        { title: item.province || "Indonesia", url: "/stays-category" },
+        { title: item.location },
+    ];
     return (
         <>
-            <Page />
             <Product
                 classSection="section-mb64"
                 urlHome="/stays-category"
-                title="Spectacular views of Queenstown"
+                title={item.title}
                 breadcrumbs={breadcrumbs}
-                options={options}
-                gallery={gallery}
+                options={item.options}
+                gallery={item.gallery}
+                rating={item.rating}
+                reviews={item.reviews}
+                avatar={item.avatar}
                 type="stays"
             />
-            <Description classSection="section" />
-
+            <Description
+                classSection="section"
+                name={item.name}
+                avatar={item.avatar}
+                description={item.description}
+                availableService={item.availableService}
+                priceOld={item.priceOld}
+                priceActual={item.priceActual}
+                discount={item.discount}
+                fee={item.fee}
+                reviews={item.reviews}
+            />
+            <CommentsProduct
+                className={cn("section", styles.comment)}
+                parametersUser={item.parametersUser}
+                info={item.description}
+                socials={item.socials}
+                comments={item.comments}
+                name={item.name}
+                avatar={item.avatar}
+                rating={item.rating}
+                reviews={item.reviews}
+                buttonText="Contact"
+            />
+            <Footer />
         </>
     );
 };
-
-export default StaysProduct;

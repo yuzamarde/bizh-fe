@@ -2,6 +2,7 @@ import React from "react";
 import cn from "classnames";
 import styles from "./Receipt.module.sass";
 import Icon from "../Icon";
+import Travelers from "../Travelers";
 
 const Receipt = ({
   className,
@@ -41,17 +42,12 @@ const Receipt = ({
           [styles.flex]: items.length > 1,
         })}
       >
-        {items.map((x, index) => (
-          <div className={styles.item} key={index}>
-            <div className={styles.icon}>
-              <Icon name={x.icon} size="24" />
-            </div>
-            <div className={styles.box}>
-              <div className={styles.category}>{x.category}</div>
-              <div className={styles.subtitle}>{x.title}</div>
-            </div>
-          </div>
-        ))}
+        <Travelers
+          className={styles.travelers}
+          title="Travelers"
+          description="Add guests"
+          icon="user"
+        />
       </div>
       <div className={styles.body}>{children}</div>
     </div>

@@ -7,6 +7,7 @@ const Details = ({
   className,
   description,
   name,
+  title,
   avatar,
   availableService = [],
 }) => {
@@ -17,7 +18,7 @@ const Details = ({
 
   return (
     <div className={cn(className, styles.details)}>
-      <h4 className={cn(styles.h4, styles.title)}>Private room in house</h4>
+      <h4 className={cn(styles.h4, styles.title)}>{title}</h4>
 
       <div className={styles.profile}>
         <span>Hosted by</span>

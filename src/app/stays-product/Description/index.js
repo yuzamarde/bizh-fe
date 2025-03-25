@@ -35,6 +35,7 @@ const Description = ({
   reviews,
   rating,
   name,
+  title,
   avatar,
   parametersUser,
 }) => {
@@ -52,6 +53,7 @@ const Description = ({
             className={styles.details}
             description={description}
             name={name}
+            title={title}
             avatar={avatar}
             availableService={availableService}
           />
@@ -66,7 +68,6 @@ const Description = ({
             fee={fee}
             rating={rating}
             reviews={reviews}
-
             parametersUser={parametersUser}
           >
             <div className={styles.btns}>

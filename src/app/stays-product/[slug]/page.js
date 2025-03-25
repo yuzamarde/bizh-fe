@@ -45,6 +45,7 @@ export default function StaysProduct({ params }) {
             />
             <Description
                 classSection="section"
+                title={item.title}
                 name={item.name}
                 avatar={item.avatar}
                 description={item.description}
